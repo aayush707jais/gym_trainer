@@ -4,6 +4,76 @@ import cv2
 import os
 import time
 
+
+# Custom CSS to match your website design
+st.markdown("""
+<style>
+    /* Main background and text colors */
+    .stApp {
+        background-color: hsl(217, 20%, 7%);
+        color: hsl(0, 0%, 100%);
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4, h5, h6 {
+        color: hsl(0, 0%, 100%) !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Primary buttons */
+    .stButton>button {
+        background-color: hsl(171, 100%, 47%) !important;
+        color: hsl(0, 0%, 0%) !important;
+        border: none !important;
+        border-radius: 1.25rem !important;
+        padding: 0.75rem 1.5rem !important;
+        font-weight: 500 !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    .stButton>button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Cards and containers */
+    .stMarkdown, .stDataFrame, .stMetric {
+        background-color: hsl(216, 20%, 10%) !important;
+        border-radius: 1.25rem !important;
+        padding: 1.5rem !important;
+        border: 1px solid hsl(216, 20%, 15%) !important;
+    }
+    
+    /* Input fields */
+    .stTextInput>div>div>input,
+    .stTextArea>div>div>textarea,
+    .stSelectbox>div>div>select {
+        background-color: hsl(216, 20%, 10%) !important;
+        color: hsl(0, 0%, 100%) !important;
+        border: 1px solid hsl(216, 20%, 15%) !important;
+        border-radius: 1.25rem !important;
+    }
+    
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: hsl(216, 20%, 10%) !important;
+        border-right: 1px solid hsl(216, 20%, 15%) !important;
+    }
+    
+    /* Links and accents */
+    a {
+        color: hsl(171, 100%, 47%) !important;
+    }
+    
+    /* Metrics */
+    [data-testid="stMetricValue"] {
+        color: hsl(171, 100%, 47%) !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Your Streamlit app code continues here...
 from engine import start_engine
 
 VIDEO_DIR = "Exercise Videos"
@@ -183,3 +253,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
